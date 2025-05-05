@@ -1,0 +1,31 @@
+program BubbleSort;
+var
+  arr: array[1..5] of integer;
+  i, j, temp: integer;
+begin
+  writeln('Enter 5 integers:');
+  for i := 1 to 5 do
+  begin
+    write('Element ', i, ': ');
+    readln(arr[i]);
+  end;
+
+  for i := 1 to 5 do
+  begin
+    for j := 1 to 5 - i do
+    begin
+      if arr[j] > arr[j + 1] then
+      begin
+        temp := arr[j];
+        arr[j] := arr[j + 1];
+        arr[j + 1] := temp;
+      end;
+    end;
+  end;    
+
+  writeln('Sorted array:');
+  for i := 1 to 5 do
+  begin
+    writeln(arr[i]);
+  end;    
+end.
