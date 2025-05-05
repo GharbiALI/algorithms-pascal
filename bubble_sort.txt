@@ -1,6 +1,6 @@
 program BubbleSort;
 var
-  arr: array[1..100] of integer;
+  userNumbers: array[1..100] of integer;
   i, j, temp, sizeOfArray: integer;
 begin
   writeln('Enter the size of the array: ');
@@ -8,18 +8,18 @@ begin
   for i := 1 to sizeOfArray do
   begin
     write('Element ', i, ': ');
-    readln(arr[i]);
+    readln(userNumbers[i]);
   end;
 
   for i := 1 to sizeOfArray do
   begin
     for j := 1 to sizeOfArray - i do
     begin
-      if arr[j] > arr[j + 1] then
+      if userNumbers[j] > userNumbers[j + 1] then
       begin
-        temp := arr[j];
-        arr[j] := arr[j + 1];
-        arr[j + 1] := temp;
+        temp := userNumbers[j];
+        userNumbers[j] := userNumbers[j + 1];
+        userNumbers[j + 1] := temp;
       end;
     end;
   end;    
@@ -27,6 +27,6 @@ begin
   writeln('Sorted array:');
   for i := 1 to sizeOfArray do
   begin
-    writeln(arr[i]);
+    writeln(userNumbers[i]);
   end;    
 end.
