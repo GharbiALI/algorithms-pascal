@@ -1,18 +1,19 @@
 program BubbleSort;
 var
-  arr: array[1..5] of integer;
-  i, j, temp: integer;
+  arr: array[1..100] of integer;
+  i, j, temp, sizeOfArray: integer;
 begin
-  writeln('Enter 5 integers:');
-  for i := 1 to 5 do
+  writeln('Enter the size of the array: ');
+  read(sizeOfArray);
+  for i := 1 to sizeOfArray do
   begin
     write('Element ', i, ': ');
     readln(arr[i]);
   end;
 
-  for i := 1 to 5 do
+  for i := 1 to sizeOfArray do
   begin
-    for j := 1 to 5 - i do
+    for j := 1 to sizeOfArray - i do
     begin
       if arr[j] > arr[j + 1] then
       begin
@@ -24,7 +25,7 @@ begin
   end;    
 
   writeln('Sorted array:');
-  for i := 1 to 5 do
+  for i := 1 to sizeOfArray do
   begin
     writeln(arr[i]);
   end;    
